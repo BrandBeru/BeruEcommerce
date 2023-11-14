@@ -6,7 +6,7 @@ import { Context } from '../../Context'
 const ProductDetail = () => {
     const {closeProductDetail,isDetailOpen, productSelected} = useContext(Context)
     return (
-         isDetailOpen && <aside className="product-detail flex flex-col fixed right-0 border border-black rounded bg-white">
+         isDetailOpen && <aside className="z-20 product-detail flex flex-col fixed right-0 border rounded-lg border-black bg-gray-700">
             <div className='flex justify-between items-center p-4'>
                 <h2 className='font-medium text-xl'>Detail</h2>
                 <AiOutlineClose className='cursor-pointer' onClick={() => closeProductDetail()} />

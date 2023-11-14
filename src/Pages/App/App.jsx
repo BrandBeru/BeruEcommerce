@@ -8,6 +8,7 @@ import { NotFound } from '../NotFound'
 import { SignIn } from '../SignIn'
 import { NavBar } from '../../Components/NavBar'
 import { Provider } from '../../Context'
+import { Login } from '../Login'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -16,11 +17,11 @@ const AppRoutes = () => {
       element: <Home />
     },
     {
-      path: '/:category',
+      path: '/category/:category',
       element: <Home />
     },
     {
-      path: '/myaccount',
+      path: '/my-account',
       element: <MyAccount />
     },
     {
@@ -42,6 +43,10 @@ const AppRoutes = () => {
     {
       path: '/signin',
       element: <SignIn />
+    },
+    {
+      path: '/login',
+      element: <Login />
     },
     {
       path: '/*',

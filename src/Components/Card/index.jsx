@@ -20,20 +20,21 @@ const Card = ({ data }) => {
 
         if (!block) {
             return (<div
-                className="absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1"
+                className="absolute top-0 right-0 flex justify-center items-center bg-gray-600 w-6 h-6 rounded-full m-2 p-1"
                 onClick={(event) => addProducts(event, data)}
             > {<AiOutlinePlus />}</div>)
         } else {
             return (<div
-                className="absolute top-0 right-0 flex justify-center items-center bg-gray-600 w-6 h-6 rounded-full m-2 p-1 text-emerald-400"
+                className="absolute top-0 right-0 flex justify-center items-center bg-gray-900 w-6 h-6 rounded-full m-2 p-1 text-green-600"
             > {<AiOutlineCheck />}</div>)
         }
     }
     return (
-        <div className="bg-white cursor-pointer w-56 h-60 rounded-lg">
+        <div className="bg-gray-900 cursor-pointer w-56 h-60 rounded-lg">
             <figure className="relative mb-2 w-full h-4/5">
-                <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5">{data.category.name}</span>
-                <img onClick={() => showProduct(data)} className="w-full h-full object-cover rounded-lg" src={data.images[0]}></img>
+                <div onClick={() => showProduct(data)} className="absolute w-full h-full duration-300 hover:bg-black/60 rounded-lg"></div>
+                <span className="absolute bottom-0 left-0 bg-gray-900/60 rounded-lg text-green-300 text-xs m-2 px-3 py-0.5">{data.category.name}</span>
+                <img className="w-full h-full object-cover rounded-lg" src={data.images[0]}></img>
                 {renderIcon(data.id)}
             </figure>
             <p className="flex justify-between">

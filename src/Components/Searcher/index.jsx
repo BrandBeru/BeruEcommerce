@@ -6,8 +6,8 @@ const Searcher = () => {
     return (
         <div>
             <input
-                className="rounded-lg border border-black w-80 p-4 mb-4 focus:outline-none"
-                type="text"
+                className="rounded-lg border border-green-600 bg-gray-900 w-96 p-2 focus:outline-none"
+                type="search"
                 placeholder="Search a product"
                 onChange={(event) => setFilterSearch(event.target.value)}
             />

@@ -14,9 +14,9 @@ function MyOrder(){
         <Layout>
             <div className="flex items-center justify-center w-80 relative mb-4">
                 <Link to={'/my-orders'} className="absolute left-0">
-                    <IoMdArrowBack className="h-6 w-6 text-black cursor-pointer" />
+                    <IoMdArrowBack className="h-6 w-6 hover:text-green-100 duration-300 cursor-pointer" />
                 </Link>
-                <h1>My order</h1>
+                <h1 className="font-medium text-2xl">My order</h1>
             </div>
             <div className="flex flex-col gap-6 w-80">
                 {
